@@ -19,6 +19,9 @@ io.on("connection", function (socket) {
         socket.broadcast.emit("onmm", point);
     })
 });
+app.get("/", function (req, res) {
+    res.end("<h1>Welcome to home Page</h1>")
+})
 let port = process.env.PORT || 3000;
 httpServer.listen(port, function () {
     console.log("sever started at port 3000");
